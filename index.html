@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Portofolio website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">Site</a>
+
+      <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+      <nav class="navbar">
+        <a href="#" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#portofolio">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Hi, my name is</h3>
+        <h1>Dan Nicholas-Bogdan</h1>
+        <h3>And I`m a <span>student</span></h3>
+        <p>This is my Portofolio Website.</p>
+        <div class="social-media">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://github.com/nch2003"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <a href="#" class="btn">Download CV</a>
+      </div>
+
+      <div class="home-img">
+        <img src="images/eu.png" alt="me" />
+      </div>
+    </section>
+
+    <!--about me-->
+    <section class="about" id="about">
+      <div class="center-text">
+        <h2 class="heading">About <span>Me</span></h2>
+      </div>
+
+      <div class="about-content">
+        <div class="box">
+          <div class="title">
+            <i class="fa-regular fa-address-card"></i>
+            <h3>Personal Info</h3>
+          </div>
+
+          <p>Name: <span>Dan Nicholas-Bogdan</span></p>
+          <p>Age: <span>20 years</span></p>
+          <p>City: <span>Bucharest</span></p>
+          <p>Email: <span>nicholasdan17@gmail.com</span></p>
+          <p>Phone: <span>0728 826 387</span></p>
+        </div>
+
+        <div class="box">
+          <i class="fa-regular fa-address-card"></i>
+          <h3>Personal Info</h3>
+          <p>Name: <span>Dan Nicholas-Bogdan</span></p>
+          <p>Age: <span>20 years</span></p>
+          <p>City: <span>Bucharest</span></p>
+          <p>Email: <span>nicholasdan17@gmail.com</span></p>
+          <p>Phone: <span>0728 826 387</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!--portofolio-->
+    <section class="portofolio" id="portofolio">
+      <h2 class="heading">My <span>Projects</span></h2>
+      <div class="portofolio-container">
+        <div class="portofolio-box">
+          <img src="images/eu.png" alt="" />
+          <div class="portofolio-layer">
+            <h4>Titlu proiect</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <i class="fa-regular fa-share-from-square"></i>
+          </div>
+        </div>
+
+        <div class="portofolio-box">
+          <img src="images/eu.png" alt="" />
+          <div class="portofolio-layer">
+            <h4>Titlu proiect</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <i class="fa-regular fa-share-from-square"></i>
+          </div>
+        </div>
+        <div class="portofolio-box">
+          <img src="images/eu.png" alt="" />
+          <div class="portofolio-layer">
+            <h4>Titlu proiect</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <i class="fa-regular fa-share-from-square"></i>
+          </div>
+        </div>
+        <div class="portofolio-box">
+          <img src="images/eu.png" alt="" />
+          <div class="portofolio-layer">
+            <h4>Titlu proiect</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <i class="fa-regular fa-share-from-square"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--contact-->
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me</span></h2>
+
+      <form action="" id="contact-form">
+        <div class="contact-input-div">
+          <input
+            type="text"
+            placeholder="Your name"
+            class="contact-input"
+            id="contact-name"
+            name="name"
+          />
+        </div>
+        <div class="contact-input-div">
+          <input
+            type="email"
+            placeholder="Your e-mail"
+            class="contact-input"
+            id="contact-email"
+            name="email"
+          />
+        </div>
+        <div class="contact-input-div">
+          <textarea
+            placeholder="Type the message here"
+            class="contact-input textarea"
+            id="message"
+            cols="30"
+            rows="10"
+            name="message"
+          ></textarea>
+        </div>
+
+        <p class="contact-message text-sm" id="contact-message"></p>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
+    <!--mail JS-->
+
+    <!--footer-->
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyright &copy; 2024 Dan Nicholas-Bogdan</p>
+      </div>
+      <div class="footer-icontop">
+        <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </footer>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
