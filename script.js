@@ -29,22 +29,30 @@ navLinks.forEach((link) => {
 });
 
 window.onscroll = () => {
+  let top = window.scrollY;
+  let header = document.querySelector("header");
+
+  // Handle sticky navbar
+  header.classList.toggle("sticky", top > 100);
+
   sections.forEach((sec) => {
-    let top = window.scrollY;
     let offset = sec.offsetTop - 150;
     let height = sec.offsetHeight;
-    let id = sec.getAtribute("id");
+    let id = sec.getAttribute("id");
 
-    if (top >= offset && top < offset + height) {
-      //   navLinks.forEach.apply((links) => {
-      //     links.classList.remove("active");
-      //     document
-      //       .querySelector("header nav a[href*=" + id + "]")
-      //       .classList.add("active");
-      //     menuIcon.classList.remove("fa-xmark");
-      //     navbar.classList.remove("active");
-      //   });
-       // Remove active class from all links
+    // Check if the section is the home section
+    if (sec.classList.contains("home") && top < offset + height) {
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+      });
+
+      // Add active class to the home link
+      let homeLink = document.querySelector(`header nav a[href="#home"]`);
+      if (homeLink) {
+        homeLink.classList.add("active");
+      }
+    } else if (top >= offset && top < offset + height) {
+      // Remove active class from all links
       navLinks.forEach((link) => {
         link.classList.remove("active");
       });
@@ -54,16 +62,10 @@ window.onscroll = () => {
       if (activeLink) {
         activeLink.classList.add("active");
       }
-    
     }
   });
 
-  // Sticky navbar
-  let header = document.querySelector("header");
-  header.classList.toggle("sticky", windows.scrollY > 100);
-
-  // remove toggle icon and navbar
-
+  // Remove toggle icon and navbar
   menuIcon.classList.remove("fa-xmark");
   navbar.classList.remove("active");
 };
@@ -120,7 +122,7 @@ const sendEmail = (e) => {
 
 contactForm.addEventListener("submit", sendEmail);
 
-// Sroll reveal
+// Sroll reveal animation
 ScrollReveal({
   distance: "80px",
   duration: 2000,
@@ -129,7 +131,7 @@ ScrollReveal({
 
 ScrollReveal().reveal(".home-content, .heading", { origin: "top" });
 ScrollReveal().reveal(".home-img, .portofolio-box, .contact", {
-  origin: "buttom",
+  origin: "bottom",
 });
-ScrollReveal().reveal(".home-contact h1, .about-content", { origin: "right" });
+ScrollReveal().reveal(".home-contact h1, .about-content", { origin: "left" });
 ScrollReveal().reveal(".home-contact p, .about-content", { origin: "right" });
