@@ -133,5 +133,5 @@ ScrollReveal().reveal(".home-content, .heading", { origin: "top" });
 ScrollReveal().reveal(".home-img, .portofolio-box, .contact", {
   origin: "bottom",
 });
-ScrollReveal().reveal(".home-contact h1, .about-content", { origin: "left" });
-ScrollReveal().reveal(".home-contact p, .about-content", { origin: "left" });
+ScrollReveal().reveal(".home-content h1, .about-content", { origin: "left" });
+ScrollReveal().reveal(".home-content p, .about-content", { origin: "left" });
