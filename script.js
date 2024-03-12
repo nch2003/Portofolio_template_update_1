@@ -134,4 +134,4 @@ ScrollReveal().reveal(".home-img, .portofolio-box, .contact", {
   origin: "bottom",
 });
 ScrollReveal().reveal(".home-contact h1, .about-content", { origin: "left" });
-ScrollReveal().reveal(".home-contact p, .about-content", { origin: "right" });
+ScrollReveal().reveal(".home-contact p, .about-content", { origin: "left" });
